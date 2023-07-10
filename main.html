@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Signup Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #36384d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container{
+            width: 880px;
+            height: 590px;
+            border-radius: 40px;
+            background-color: #ffffff;
+        }
+
+        #illustration{
+            display: flex;
+            float: right;
+            height: 550px;
+            padding: 20px;
+        }
+
+        #illustration2{
+            display: none;
+            float: right;
+            padding: 20px;
+        }
+
+        .content{
+            padding-left:70px;
+            padding-top: 100px;
+        }
+
+        .content h1{
+            color: #36384d;
+            font-size: 3em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+        }
+
+
+        .content h3{
+            color: #36384d;
+            font-family: Roboto;
+            font-weight: 400;
+            padding-top: 20px;
+        }
+
+        ul{
+            list-style: none;
+            margin-top: 10px;
+        }
+        #icon{
+            padding-top: 15px;
+        }
+
+        ul span{
+            margin-left: 20px;
+            position: relative;
+            top: -5px;
+            color: #36384d;
+        }
+
+        .email{
+            margin-top: 20px;
+            color: #36384d;
+            font-family: Roboto;
+        }
+
+        label{
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        input{
+            margin-top: 15px;
+            cursor: pointer;
+            padding: 18px;
+            width: 330px;
+            border-radius: 8px;
+            border: 1px solid gray;
+        }
+
+        button{
+            background-color: #36384d;
+            margin-top: 15px;
+            cursor: pointer;
+            border-radius: 8px;
+            width: 370px;
+            padding: 18px;
+            border: none;
+            color: white;
+        }
+
+        button:hover{
+            background-image: linear-gradient(to right, rgb(255, 39, 86), rgb(255, 60, 0));
+        }
+
+        #error{
+            margin-left: 180px;
+            font-size: 12px;
+            font-weight: 700;
+            color: rgb(255, 60, 0);
+            opacity: 0;
+        }
+
+        @media only screen and (max-width: 375px){
+            body{
+                background-color: white;
+            }
+
+            #illustration{
+                display: none;
+            }
+            #illustration2{
+                position: relative;
+                width: 380px;
+                display: flex;
+                padding: 0;
+            }
+
+            .content{
+                padding-left: 20px;
+                padding-top: 340px;
+            }
+
+            .content h1{
+                font-size: 2em;
+            }
+
+            input{
+                width: 310px;
+            }
+
+            button{
+                width: 350px;
+                margin-top: px;
+            }
+
+            #error{
+                margin-left: 150px;
+            }
+        
+        }
+
+    </style>
+</head>
+<body>
+   <div class="container">
+        <img src="illustration-sign-up-desktop.svg" id="illustration">
+        <img src="illustration-sign-up-mobile.svg" id="illustration2">
+        <div class="content">
+            <h1>Stay updated!</h1> 
+            <h3>Join 60,000+ product managers receiving monthly updates on:</h3>
+            <ul>
+                <li><img src="icon-list.svg" id="icon"><span>Product discovery and building what matters</span></li>
+                <li><img src="icon-list.svg" id="icon"><span>Measuring to ensure updates are a success</span></li>
+                <li><img src="icon-list.svg" id="icon"><span>And much more!</span></li>
+            </ul>
+            <div class="email">
+                <label for="text">Email address</label><span id="error">Valid email required</span><br>
+                <input type="text" placeholder="email@company.com" id="text">
+                <button onclick="validate()">Subscribe to monthly newsletter</button>
+            </div>
+        </div>
+   </div>
+
+   <script src="script.js"></script>
+
+    
+</body>
+</html>
+
+<!--
+border: 1px solid rgb(255, 60, 0, .4);
+background-color: rgb(255, 60, 0, .2);
+        -->
